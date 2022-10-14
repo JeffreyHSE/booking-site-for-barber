@@ -1,0 +1,13 @@
+package com.example.bookingfriseur;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BookingFriseurApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BookingFriseurApplication.class, args);
+	}
+
+}

@@ -1,0 +1,98 @@
+/*
+    ----------- General ---------
+ */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    ----------- Navbar ---------
+ */
+#navbar-header {
+    background-color: #47B5FF;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#navbar-header-items {
+display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#header-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar-header-items > #header-logo-container > img {
+    width: 7rem;
+    height: auto;
+}
+
+#navbar-header-items > #header-logo-container > p {
+    font-family: "Comic Sans MS", serif;
+    font-size: 150%;
+    text-decoration: underline;
+}
+/*
+    ----------- Booking ---------
+ */
+#booking-section {
+    display: flex;
+    justify-content: center;
+    background-color: #256D85;
+    width: 100%;
+    height: 40rem;
+}
+
+#booking-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+#booking-items > span {
+    font-weight: bold;
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+#booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.booking_personal_infos {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.booking_shop_info {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.booking_shop_submit {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*
+    ----------- Footer ---------
+ */
+#footer {
+    background-color: #06283D;
+    width: 100%;
+    height: 8.1rem;
+}
