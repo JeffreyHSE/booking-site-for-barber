@@ -82,7 +82,7 @@ display: flex;
     flex-wrap: wrap;
 }
 
-.booking_shop_submit {
+#booking_shop_submit {
     display: flex;
     justify-content: center;
 }
