@@ -17,11 +17,11 @@ public class BookingController {
 
     @GetMapping
     public List<Bookings> list() {
-        return (List<Bookings>) bookingRepository.findAll();
+        return bookingRepository.findAll();
     }
 
-    @PostMapping
-    public Bookings create(@RequestBody final Bookings bookings){
+    @PostMapping("/create")
+    public Bookings create(@RequestBody Bookings bookings){
         return bookingRepository.saveAndFlush(bookings);
     }
 
