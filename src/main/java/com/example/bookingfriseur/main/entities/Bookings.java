@@ -1,7 +1,5 @@
 package com.example.bookingfriseur.main.entities;
 
-import com.fasterxml.jackson.annotation.JsonTypeId;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,11 +9,11 @@ import javax.persistence.Id;
 public class Bookings {
 
     public String getFirstName() {
-        return firstName;
+        return first_name;
     }
 
     public String getLastName() {
-        return lastName;
+        return last_name;
     }
 
     public String getDate() {
@@ -26,20 +24,30 @@ public class Bookings {
         return barber;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    public int getId() {
+        return id;
+    }
 
-    private String firstName;
-    private String lastName;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    private int id;
+
+    private String first_name;
+    private String last_name;
     private String date;
     private String barber;
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.first_name = firstName;
     }
 
     public void setLastName(String lastName) {
-        this.lastName = lastName;
+        this.last_name = lastName;
     }
 
     public void setDate(String date) {
