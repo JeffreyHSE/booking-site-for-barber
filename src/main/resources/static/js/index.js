@@ -14,10 +14,10 @@ submit.addEventListener("click", e => {
         return;
     }
 
-    const data = { 'name':fName };
+    const data = { 'firstName':fName, 'lastName':lName, 'date':date, 'barber':barber };
 
-    fetch('http://localhost:5000/bookings/add', {
-        method: 'POST', // or 'PUT'
+    fetch('http://localhost:5000/bookings/create', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
