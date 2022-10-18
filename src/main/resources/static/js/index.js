@@ -31,6 +31,16 @@ submit.addEventListener("click", e => {
             console.error('Error:', error);
         });
 
+    const clearInput = function () {
+        document.getElementById("fname").value = '';
+        document.getElementById("lname").value = '';
+        document.getElementById("appointment_start").value = '';
+        document.getElementById("barber_of_choice").value = '';
+    }
+
+    clearInput();
+
+    window.alert("You successfully made an appointment!");
     console.log(fName);
     console.log(lName);
     console.log(date);
