@@ -1,8 +1,7 @@
 let barber_table = document.createElement("table");
-
 let body = document.querySelector("body");
 
-async function make_async() {
+async function display_data() {
     let response = await fetch('http://localhost:5000/bookings/', {
         method: 'GET',
         headers: {
@@ -34,12 +33,39 @@ async function make_async() {
          <td>${e.date}</td>
          <td>${e.barber}</td>
          <td style="font-weight: bold">${e.pending}</td>
-         <td style="display: flex; flex-direction: column; gap: 1rem"><button>ACCEPT</button>
-         <button>DECLINE</button></td`;
+         <td style="display: flex; flex-direction: column; gap: 1rem"><button id="accept-button">ACCEPT</button>
+         <button id="decline-button">DECLINE</button>
+         <button id="clear-button">CLEAR</button></td`;
 
     barber_table.appendChild(barber_data);
  });
 
     body.insertAdjacentElement("afterbegin", barber_table);
 }
-make_async();
+display_data();
+
+window.onload=function() {
+    setTimeout(e => {
+        let accept_btn = document.querySelectorAll("#accept-button");
+        let decline_btn = document.querySelectorAll("#decline-button");
+        let clear_btn = document.querySelectorAll("#clear-button");
+
+        accept_btn.forEach(e => {
+            e.addEventListener("click", e => {
+                console.log(e.path[2].children[0].innerHTML);
+            });
+        });
+
+        decline_btn.forEach(e => {
+            e.addEventListener("click", e => {
+                console.log(e.path[2].children[0].innerHTML);
+            });
+        });
+
+        clear_btn.forEach(e => {
+            e.addEventListener("click", e => {
+                console.log(e.path[2].children[0].innerHTML);
+            });
+        });
+    }, 500);
+}
