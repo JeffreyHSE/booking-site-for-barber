@@ -15,6 +15,7 @@ async function make_async() {
 
         barber_table.innerHTML = `
   <tr>
+    <th>ID</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Date</th>
@@ -25,6 +26,7 @@ async function make_async() {
      let barber_data = document.createElement("tr");
      barber_data.innerHTML =
          `
+         <td>${e.id}</td>
          <td>${e.firstName}</td>
          <td>${e.lastName}</td>
          <td>${e.date}</td>
