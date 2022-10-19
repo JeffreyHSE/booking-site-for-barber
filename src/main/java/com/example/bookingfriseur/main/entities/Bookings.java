@@ -41,6 +41,16 @@ public class Bookings {
     private String last_name;
     private String date;
     private String barber;
+    private String pending;
+    public String getPending() {
+        return pending;
+    }
+
+    public void setPending(String pending) {
+        this.pending = pending;
+    }
+
+
 
     public void setFirstName(String firstName) {
         this.first_name = firstName;
