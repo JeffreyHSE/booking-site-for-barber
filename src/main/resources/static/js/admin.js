@@ -20,6 +20,8 @@ async function make_async() {
     <th>Last Name</th>
     <th>Date</th>
     <th>Barber</th>
+    <th>Status</th>
+    <th>Action</th>
   </tr>`;
 
  Object.values(appointment_data).forEach(e => {
@@ -30,7 +32,11 @@ async function make_async() {
          <td>${e.firstName}</td>
          <td>${e.lastName}</td>
          <td>${e.date}</td>
-         <td>${e.barber}</td>`;
+         <td>${e.barber}</td>
+         <td style="font-weight: bold">${e.pending}</td>
+         <td style="display: flex; flex-direction: column; gap: 1rem"><button>ACCEPT</button>
+         <button>DECLINE</button></td`;
+
     barber_table.appendChild(barber_data);
  });
 
