@@ -53,18 +53,77 @@ window.onload=function() {
         accept_btn.forEach(e => {
             e.addEventListener("click", e => {
                 console.log(e.path[2].children[0].innerHTML);
+                const update_data = { 'pending':"accepted" };
+
+                fetch('http://localhost:5000/bookings/accept/'+Number(e.path[2].children[0].innerHTML), {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(update_data),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+                setTimeout(e => {
+                    document.location.reload();
+                }, 500)
             });
         });
 
         decline_btn.forEach(e => {
             e.addEventListener("click", e => {
                 console.log(e.path[2].children[0].innerHTML);
+                const update_data = { 'pending':"declined" };
+
+                fetch('http://localhost:5000/bookings/decline/'+Number(e.path[2].children[0].innerHTML), {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(update_data),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+                setTimeout(e => {
+                    document.location.reload();
+                }, 500)
+
             });
         });
 
         clear_btn.forEach(e => {
             e.addEventListener("click", e => {
                 console.log(e.path[2].children[0].innerHTML);
+                console.log(e.path[2].children[0].innerHTML);
+                const clear_data = { 'status':"deleted" };
+
+                fetch('http://localhost:5000/bookings/delete/'+Number(e.path[2].children[0].innerHTML), {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(clear_data),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        console.log('Success:', data);
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                    });
+                setTimeout(e => {
+                    document.location.reload();
+                }, 500)
             });
         });
     }, 500);
