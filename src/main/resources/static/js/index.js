@@ -14,7 +14,7 @@ submit.addEventListener("click", e => {
         return;
     }
 
-    const data = { 'firstName':fName, 'lastName':lName, 'date':date, 'barber':barber };
+    const data = { 'firstName':fName, 'lastName':lName, 'date':date, 'barber':barber, pending: "pending" };
 
     fetch('http://localhost:5000/bookings/create', {
         method: 'POST',
