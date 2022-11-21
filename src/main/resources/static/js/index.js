@@ -1,4 +1,4 @@
-let submit = document.getElementById("booking_shop_submit");
+let submit = document.getElementById("booking_submit");
 
 submit.addEventListener("click", e => {
     e.preventDefault();
